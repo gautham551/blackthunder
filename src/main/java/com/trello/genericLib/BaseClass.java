@@ -21,4 +21,8 @@ public class BaseClass
     	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     	driver.manage().window().maximize();
     }
+	@AfterMethod
+	public void closeBrowser(){
+	    driver.close();
+	}
 }
